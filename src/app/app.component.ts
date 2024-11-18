@@ -1,13 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {FirtsComponentComponent} from './components/firts-component/firts-component.component';
+import {ParentDataComponent} from './components/parent-data/parent-data.component';
+import {DirectivesComponent} from './components/directives/directives.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    FirtsComponentComponent,
+    ParentDataComponent,
+    DirectivesComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  userName = "Joaquim";
+
+  userData = {
+    email: "joaquim@gmail.com",
+    role: "Admin"
+  }
+
   title = 'invoice-generator-web';
 }
